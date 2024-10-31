@@ -1,0 +1,38 @@
+$primary-color: #007bff;
+$secondary-color: #28a745;
+$text-color: #ffffff;
+$hover-darken: 10%;
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+  color: $text-color;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.primary {
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: darken($primary-color, $hover-darken);
+  }
+}
+
+.secondary {
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: darken($secondary-color, $hover-darken);
+  }
+}

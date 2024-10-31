@@ -1,0 +1,11 @@
+{
+    "entryPoints": ["src"],
+    "out": "docs",
+    "includeVersion": true,
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "tsconfig": "tsconfig.json",
+    "name": "Real-Time Trading Room Documentation",
+    "readme": "README.md"
+  }

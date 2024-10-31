@@ -1,0 +1,90 @@
+@import "../../styles/variables";
+
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color;
+}
+
+.tableContainer {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 12px $shadow-color;
+}
+
+.tableHeader {
+  background-color: $header-bg;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  .icon {
+    font-size: 2.5rem;
+    color: $secondary-color;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    font-weight: 300;
+    color: lighten(white, 40%);
+    margin-top: 5px;
+  }
+}
+
+.tableTimer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $background-color;
+  padding: 15px 20px;
+  border-bottom: 2px solid $border-color;
+
+  .timerCard {
+    background-color: lighten($header-bg, 10%);
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    box-shadow: 0 4px 8px $shadow-color;
+
+    .label {
+      font-size: 0.9rem;
+      color: lighten(white, 20%);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .value {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    &.active {
+      background-color: $secondary-color;
+    }
+
+    &.inactive {
+      background-color: $danger-color;
+    }
+  }
+}
+
+.btnWrapper {
+  width: 100%;
+  max-width: 150px;
+}
+
+.backLink {
+  display: block;
+  margin-top: 20px;
+}

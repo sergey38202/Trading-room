@@ -1,0 +1,79 @@
+@import "../../styles/variables";
+
+%box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+%container-padding {
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+@mixin button-styles($bg-color, $hover-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color $transition-duration, transform 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $hover-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @extend %container-padding;
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  background-color: $background-color;
+  @extend %box-shadow;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .button {
+      &.startButton {
+        @include button-styles($secondary-color, darken($secondary-color, 10%));
+      }
+
+      &.endButton {
+        @include button-styles($danger-color, darken($danger-color, 10%));
+      }
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color $transition-duration;
+  }
+}
